@@ -119,7 +119,7 @@ let wrap backend compiler args =
     "-config"; "-v"; "-version"; "-vnum"; "-warn-help"; "-where";
     "-help" ; "--help"
   ] in
-  let compile = not (stop (*|| set "-a"*)) && sources <> [] || set "-pack"
+  let compile = not (stop || set "-i") && sources <> [] || set "-pack"
   and link = not (stop || set "-c" || set "-pack" || set "-a" || set "-i")
   and kept =
     List.filter (function a -> List.mem a ["-nostdlib"; "-nopervasives"]) args
