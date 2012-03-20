@@ -80,7 +80,7 @@ let rec filter_for_type = function
   | "-pp" :: pp :: l ->
     "-pp" :: wrap_pp pp :: filter_for_type l
   | ("-custom" | "-fPIC" | "-fno-PIC" | "-compact" | "-nodynlink" | "-p" |
-     "-S" | "-shared" | "-vmthread" |
+     "-ccopt" | "-S" | "-shared" | "-vmthread" |
      "-instr" | "-dcmm" | "-dsel" | "-dcombine" | "-dlive" | "-dspill" |
      "-dinterf" | "-dprefer" | "-dalloc" | "-dreload" | "-dscheduling" |
      "-dlinear" | "-dstartup") :: l
